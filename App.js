@@ -14,9 +14,9 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
        
-        <Stack.Screen name="Pedido" component={Pedido} options={{ headerShown: false }} />
         <Stack.Screen name="Loginit" component={Loginit} options={{ headerShown: false }} />
         <Stack.Screen name="Cardapio" component={Cardapio} options={{ headerShown: false }}/>
+        <Stack.Screen name="Pedido" component={Pedido} options={{ headerShown: false }} />
         <Stack.Screen name="Finalizado" component={Finalizado} options={{ headerShown: false }} />
 
       </Stack.Navigator> 

@@ -1,38 +1,37 @@
 import React from "react";
 import { View, Text, TextInput, Image, TouchableOpacity, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
 
-export default function Loginit({navigation}) {
+export default function Loginit({ navigation }) {
 
     return (
-        <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === "ios" ? "padding" : "height"}>
+        <View style={styles.container} >
             <Image
                 style={styles.logo}
                 source={require('../../image/background.png')}
             />
-
-            <View style={styles.container2}>
-                <Text style={styles.container2}>Com fome?</Text>
-            </View>
-            <View>
-                <Text>Nós resolvemos isso</Text>
-            </View>
-            <View>
-                <Text>Faça seu pedido agora mesmo na ITBurguer</Text>
-            </View>
-            <View>
-                <Text>
-                    e aproveite os descontos e vantagens de nossa plataforma
-                </Text>
-            </View>
+            <View style={{
+                textAlign: 'center',justifyContent:'space-between', backgroundColor: '#FF909D', height: 30, width: '100%', backgroundColor: 'white', bottom: 20, borderTopLeftRadius: 40,borderTopRightRadius: 40, 
+                 alignContent:'space-between'}}>
+                <View >
+                    <Text style={{height:'100%' ,fontWeight: 'bold',fontSize: 40,}}>
+                        Com fome?
+                    </Text>
+                    <Text style={{fontWeight: 'bold',fontSize: 25, color:'red'}}>Nós resolvemos isso</Text>
+                </View>
+               
+                <View>
+                    <Text style={{fontSize:20,color:'grey',textAlign:'center', marginHorizontal:15, marginBottom:30, marginTop:20}}>Faça seu pedido agora mesmo na ITBurguer e aproveite os descontos e vantagens de nossa plataforma!</Text>
+                </View>
+                
                 <TouchableOpacity
                     style={styles.btnSubmit}
                     onPress={() => navigation.navigate('Cardapio')}>
                     <Text style={styles.textSubmit}>Ver Cardápio</Text>
                 </TouchableOpacity>
 
-               
-               
-        </KeyboardAvoidingView>
+            </View>
+
+        </View>
     )
 }
 
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#FFFFFF',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
 
     },
 
@@ -60,7 +59,7 @@ const styles = StyleSheet.create({
 
     logo: {
         width: '100%',
-        height: '85%',
+        height: '50%',
 
     },
     viewText: {
@@ -83,8 +82,9 @@ const styles = StyleSheet.create({
         // #FF6701
         padding: 10,
         width: '90%',
-        alignItems: 'center',
-        justifyContent: 'center',
+        marginTop:50,
+        alignSelf:'center',
+        
         borderRadius: 15,
     },
     textSubmit: {

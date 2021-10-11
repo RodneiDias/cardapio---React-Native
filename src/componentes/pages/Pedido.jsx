@@ -54,5 +54,5 @@ return (
         </View>
         
     </ScrollView>
-)
+);
 } 
