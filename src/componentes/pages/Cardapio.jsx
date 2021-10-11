@@ -51,8 +51,7 @@ export default function Cardapio({ navigation }) {
                             renderItem={({ item }) => (
 
                                 <TouchableOpacity
-                                    onPress={() => { navigation.navigate('Pedido',{itemDesc:item.description,itemName:item.name,
-                                    otherParam: item.price}) }}
+                                    onPress={() => { navigation.navigate('Pedido',{itemDesc:item.description,itemName:item.name, otherParam: item.price}) }}
                                 >
                                     <View style={{ marginHorizontal: 5, marginVertical: 5, backgroundColor: '#e5e4e2', borderRadius: 10, flexDirection: 'row' }}>
                                         <Image source={{ uri: item.image }} style={{ width: 120, height: 'auto', borderTopLeftRadius: 10, borderBottomLeftRadius: 10 }} />
@@ -77,7 +76,7 @@ export default function Cardapio({ navigation }) {
                     )}
                 </View>
                 <View>
-                    <Text style={{ color: 'gray', marginLeft: 18, marginTop: 10, fontWeight: 'bold', fontSize:18 }}>Bebidas</Text>
+                    <Text style={{ color: 'gray', marginLeft: 18, marginTop: 5, fontWeight: 'bold', fontSize:18 }}>Bebidas</Text>
                 </View>
 
                 <View style={{ width: '90%', height: 200, margin: 10 }}>
@@ -86,8 +85,7 @@ export default function Cardapio({ navigation }) {
                             data={data.drinks}
                             renderItem={({ item }) => (
                                 <TouchableOpacity
-                                onPress={() => { navigation.navigate('Pedido', {itemDesc:item.description,itemName:item.name,
-                                    otherParam: item.price}) }}
+                                onPress={() => { navigation.navigate('Pedido', {itemDesc:item.description,itemName:item.name, otherParam: item.price}) }}
                                 >
                                     <View style={{ marginHorizontal: 5, marginVertical: 5, backgroundColor: '#e5e4e2', borderRadius: 20, flexDirection: 'row' }}>
                                         <Image

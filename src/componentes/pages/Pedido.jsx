@@ -9,18 +9,17 @@ export default function Pedido({navigation, route}){
     const subtracao = () => setQnt(qnt => qnt - 1);
 
 return (
-    <ScrollView>
+    <ScrollView style={{}}>
         <ImageBackground source={require('../../image/cardImage.png')} style={{width:'100%', height:'60%'}}>
             
         </ImageBackground>
         
-        <View style={{borderTopLeftRadius:20, borderTopRightRadius:20,backgroundColor:'white', bottom:150, height:'70%'}}>
-            <Text style={{margin:20, fontSize:25, fontWeight:'bold'}}>
+        <View style={{flexDirection:'column', borderTopLeftRadius:20, borderTopRightRadius:20,backgroundColor:'white', bottom:200, height:'auto', marginBottom:230 }}>
+            <Text style={{marginLeft:20, marginTop:20, fontSize:25, fontWeight:'bold'}}>
             {JSON.stringify(itemName)}
             </Text>
-            <Text style={{margin:20,textAlign:'justify'}}>
+            <Text style={{marginLeft:20,textAlign:'justify'}}>
                 {itemDesc}
-                {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, laboriosam cumque at eum, qui voluptates voluptatem nobis repudiandae pariatur assumenda ipsam eos sunt nam reprehenderit cupiditate veritatis rem eaque consectetur. */}
             </Text>
             <Text style={{margin:20, fontSize:15, fontWeight:'bold'}}>
                 Quantidade
@@ -39,7 +38,7 @@ return (
             <Text style={{margin:20, fontSize:15, fontWeight:'bold'}}>
                Observações
             </Text>
-            <TextInput style={{borderRadius:10,borderColor:'black', width:'90%', padding:20, borderWidth:1 , marginLeft:20}}></TextInput>
+            <TextInput style={{borderRadius:10,borderColor:'black', width:'90%', padding:20, borderWidth:1 , marginLeft:20}}placeholder='Digite sua observação aqui.' ></TextInput>
 
             <Text style={{marginLeft:20, fontSize:15, fontWeight:'bold'}}>
                 Total

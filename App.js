@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import Finalizado from './src/componentes/pages/Finalizado';
 import Cardapio from './src/componentes/pages/Cardapio';
-import Pedido from './src/componentes/pages/pedido';
+import Pedido from './src/componentes/pages/Pedido';
 import Loginit from './src/componentes/pages/Loginit';
 
 const Stack = createStackNavigator();
@@ -27,11 +27,4 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
