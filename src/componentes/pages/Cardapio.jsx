@@ -85,7 +85,7 @@ export default function Cardapio({ navigation }) {
                             data={data.drinks}
                             renderItem={({ item }) => (
                                 <TouchableOpacity
-                                    onPress={() => { }}
+                                onPress={() => { navigation.navigate('Pedido', item.id) }}
                                 >
                                     <View style={{ marginHorizontal: 5, marginVertical: 5, backgroundColor: '#e5e4e2', borderRadius: 20, flexDirection: 'row' }}>
                                         <Image
