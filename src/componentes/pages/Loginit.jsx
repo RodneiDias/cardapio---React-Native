@@ -11,17 +11,17 @@ export default function Loginit({ navigation }) {
                 source={require('../../image/background.png')}
             />
             <View style={{
-                textAlign: 'center',justifyContent:'space-between', backgroundColor: '#FF909D', height: 30, width: '100%', backgroundColor: 'white', bottom: 20, borderTopLeftRadius: 40,borderTopRightRadius: 40, 
+                justifyContent:'space-between', backgroundColor: '#FF909D', height: 30, width: '100%', backgroundColor: 'white', bottom: 20, borderTopLeftRadius: 40,borderTopRightRadius: 40, 
                  alignContent:'space-between'}}>
                 <View >
-                    <Text style={{height:'100%' ,fontWeight: 'bold',fontSize: 40,}}>
+                    <Text style={{textAlign: 'center', height:'100%' ,fontWeight: 'bold',fontSize: 40,}}>
                         Com fome?
                     </Text>
-                    <Text style={{fontWeight: 'bold',fontSize: 25, color:'red'}}>Nós resolvemos isso</Text>
+                    <Text style={{textAlign: 'center',fontWeight: 'bold',fontSize: 25, color:'red'}}>Nós resolvemos isso</Text>
                 </View>
                
                 <View>
-                    <Text style={{fontSize:20,color:'grey',textAlign:'center', marginHorizontal:15, marginBottom:30, marginTop:20}}>Faça seu pedido agora mesmo na ITBurguer e aproveite os descontos e vantagens de nossa plataforma!</Text>
+                    <Text style={{fontSize:20,color:'grey',textAlign:'center', marginHorizontal:15, marginBottom:30, marginTop:60}}>Faça seu pedido agora mesmo na ITBurguer e aproveite os descontos e vantagens de nossa plataforma!</Text>
                 </View>
                 
                 <TouchableOpacity
@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
     textSubmit: {
         color: 'white',
         fontSize: 20,
+        textAlign: 'center',
     },
     btnElse: {
         marginTop: 10,
