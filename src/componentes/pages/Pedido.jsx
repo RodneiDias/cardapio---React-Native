@@ -2,8 +2,8 @@ import React, {useEffect, useState} from "react";
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
 import { ScrollView, TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 
-export default function Pedido({navigation}){
-   
+export default function Pedido({navigation, route}){
+    const { itemDesc, itemName, itemId, otherParam } = route.params;
     const [qnt, setQnt] = useState(0);
     const soma = () => setQnt(qnt => qnt + 1);
     const subtracao = () => setQnt(qnt => qnt - 1);
@@ -16,10 +16,11 @@ return (
         
         <View style={{borderTopLeftRadius:20, borderTopRightRadius:20,backgroundColor:'white', bottom:150, height:'70%'}}>
             <Text style={{margin:20, fontSize:25, fontWeight:'bold'}}>
-                Nome do Combo
+            {JSON.stringify(itemName)}
             </Text>
             <Text style={{margin:20,textAlign:'justify'}}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, laboriosam cumque at eum, qui voluptates voluptatem nobis repudiandae pariatur assumenda ipsam eos sunt nam reprehenderit cupiditate veritatis rem eaque consectetur.
+                {itemDesc}
+                {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, laboriosam cumque at eum, qui voluptates voluptatem nobis repudiandae pariatur assumenda ipsam eos sunt nam reprehenderit cupiditate veritatis rem eaque consectetur. */}
             </Text>
             <Text style={{margin:20, fontSize:15, fontWeight:'bold'}}>
                 Quantidade
@@ -44,7 +45,7 @@ return (
                 Total
             </Text>
             <Text style={{marginLeft:20, fontSize:15, fontWeight:'bold'}}>
-                R$38,00
+                R${otherParam * qnt} 
             </Text>
             <TouchableOpacity onPress={() => navigation.navigate('Finalizado')} style={{backgroundColor:'pink', margin:20, borderRadius:20, padding:10}}>
                 <Text style={{fontSize:20, textAlign:'center'}}>Fazer pedido</Text>
