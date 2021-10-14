@@ -4,7 +4,7 @@ import { ScrollView, TextInput, TouchableOpacity } from 'react-native-gesture-ha
 
 export default function Pedido({navigation, route}){
     const { itemDesc, itemName, itemId, otherParam } = route.params;
-    const [qnt, setQnt] = useState(0);
+    const [qnt, setQnt] = useState(1);
     const soma = () => setQnt(qnt => qnt + 1);
     const subtracao = () => setQnt(qnt => qnt - 1);
 

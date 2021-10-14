@@ -10,9 +10,7 @@ export default function Loginit({ navigation }) {
                 style={styles.logo}
                 source={require('../../image/background.png')}
             />
-            <View style={{
-                justifyContent:'space-between', backgroundColor: '#FF909D', height: 30, width: '100%', backgroundColor: 'white', bottom: 20, borderTopLeftRadius: 40,borderTopRightRadius: 40, 
-                 alignContent:'space-between'}}>
+            <View style={styles.container2}>
                 <View >
                     <Text style={{textAlign: 'center', height:'100%' ,fontWeight: 'bold',fontSize: 40,}}>
                         Com fome?
